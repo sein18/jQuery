@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        function click01(){
+            let inputVal = $("input:text").val(); 
+        }
+        function click02(){
+            //input태그 타입이 radio를 찾아 value를 id가 view인 div에 넣어보자.
+            let radioVal = $("input:radio").val(); 
+            $("#view").html("<b>"+radioVal+"</b>");
+        }
+        function click03(){
+            let inputVal = $("input:checkbox").val();
+            $("#view").html(inputVal);
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text">
+        <input type="button" value="선택" onclick="click01();">
+        <input type="radio" value="22/04/04~22/08/19" onclick="click02();">22년04월04일 ~   </form>
+        <input type="checkbox" value="멀티캠퍼스 선릉 504호" onclick="click03();">멀티캠퍼스
+        <div id="view"></div>    
+    </body>
+</html>

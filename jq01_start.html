@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js">  //j쿼리</script>
+    <style>
+        li{
+            width: 200px;
+        }
+        img{
+            width: 200px;
+        }
+    </style>
+    <script>
+        function test01(){
+            //id가 list01인 요소에 자식인 li를 팢아서 첫 번째 요소에 배경색을 pink로 바꿔보자.
+            
+            // let li = document.getElementsByTagName("li")[1].style.backgroundColor = "pink";
+
+            //jQuery
+            $("#list01 > li").eq(1).css("background-color","pink"); 
+
+        }
+
+        // window.onload = function(){  }
+        // jQuery(document).ready(function(){  });
+        // $(document).ready(function(){  });
+        // $(function(){  });
+
+        $(function(){
+            $("img").click(function(){ 
+                alert("이미지를 클릭했습니다.");
+                $(this).hide();
+            });
+        });
+        function showIng(){
+            $("img").show();
+        }
+        function resizeIng(){
+            // $("img").css("width","150px").css("height","150px");
+            $("img").css( { "width":"150px" , "height":"150px" , "opacity":"0.7" } );
+        }
+        function addIng(){
+            $("img").last().after("<img src = 'image/img02.png'>");
+        }
+        function toggleIng(){
+            $("img").toggle();
+        }
+    </script>
+</head>
+<body>
+    <h1>jQuery 시작</h1>
+    <ul id="list01">
+        <li>1. 셀렉터 표현식</li>
+        <li>2. DOM 탐색</li>
+        <li>3. 이벤트</li>
+        <li>4. 이팩트</li>
+        <li>5. Ajax</li>
+    </ul>
+    <button onclick="test01();">리스트 강조하기</button>
+    <hr>
+    <button onclick="showIng();">이미지 보이기</button>
+    <button onclick="resizeIng();">이미지 크기변경</button>
+    <button onclick="addIng();">이미지 추가</button>
+    <button onclick="toggleIng();">이미지 보이기/숨기기</button>
+    <br><br>
+    <div>
+        <img alt="test" src="image/img04.PNG">
+    </div>
+</body>
+</html>
