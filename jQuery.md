@@ -84,3 +84,30 @@ $("li").eq(0).css("background-color","pink");
 
 ---
 
+* __태그들의 부모, 형제 ,자식 탐색__
+
+  * find("selector") : 선택한 엘리먼트의 자손들 중에 탐색하고자 하는 엘리먼트를 찾는다.
+  * children("selector") : 선택한 엘리먼트의 자식요소들 중에 탐색하고자 하는 엘리먼트를 찾는다.
+  * parent()/parents() : 선택한 엘리먼트의 부모요소를 찾는다.
+  * next("selector") : 선택한 엘리먼트 다음에 따라오는 요소를 찾는다.
+
+  ```js
+  $(document).ready(function(){
+      $("div").find("b").css({"font-size":"30px","color":"red"});
+      //div자손 중 b태그들의 css변경
+      
+      $("div").children("#chd").text("2.children()");
+      //div자식 중 
+      
+      $("#chd").parent().css("background-color","skyblue");
+      //id가chd의 부모요소의 css변경
+      
+      $("p>b").parents("p").css("background-color","khaki");
+      //p>b의 상위요소들 중에 p요소만 css변경
+      
+      $("p").eq(0).next().css({"font-size":"50px","color":"blue"});
+      // $("p").eq(0).nextAll().css({"font-size":"50px","color":"blue"}); 
+  });
+  ```
+
+  
