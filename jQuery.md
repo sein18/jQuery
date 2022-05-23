@@ -11,7 +11,7 @@
 
 ---
 
-* __javascript & jQuery 차이__ 
+* __javascript & jQuery 를 쓰는 이유__
   * javascript를 이용하여 더 빠르고 쉽게 작성하게 도와주는 API개념이다.
 
 ```js
@@ -21,6 +21,9 @@ let li = document.getElementsByTagName("li")[0].style.backgroundColor = "pink";
 //jQuery
 $("li").eq(0).css("background-color","pink"); 	
 ```
+
+* __(jQuery를 많이 쓰고있지만, 요즘에는 vanilla JS를 많이 사용한다.)__
+  * `vanilla JS`란 순수 javascript를 활용한다는 뜻이라고 할 수 있다.
 
 ---
 

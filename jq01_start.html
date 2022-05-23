@@ -36,17 +36,17 @@
                 $(this).hide();
             });
         });
-        function showIng(){
+        function showImg(){
             $("img").show();
         }
-        function resizeIng(){
+        function resizeImg(){
             // $("img").css("width","150px").css("height","150px");
             $("img").css( { "width":"150px" , "height":"150px" , "opacity":"0.7" } );
         }
-        function addIng(){
+        function addImg(){
             $("img").last().after("<img src = 'image/img02.png'>");
         }
-        function toggleIng(){
+        function toggleImg(){
             $("img").toggle();
         }
     </script>
@@ -62,10 +62,10 @@
     </ul>
     <button onclick="test01();">리스트 강조하기</button>
     <hr>
-    <button onclick="showIng();">이미지 보이기</button>
-    <button onclick="resizeIng();">이미지 크기변경</button>
-    <button onclick="addIng();">이미지 추가</button>
-    <button onclick="toggleIng();">이미지 보이기/숨기기</button>
+    <button onclick="showImg();">이미지 보이기</button>
+    <button onclick="resizeImg();">이미지 크기변경</button>
+    <button onclick="addImg();">이미지 추가</button>
+    <button onclick="toggleImg();">이미지 보이기/숨기기</button>
     <br><br>
     <div>
         <img alt="test" src="image/img04.PNG">
