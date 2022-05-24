@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("p:eq(0)").click(function(){
+                $(this).parent().remove();
+            });
+
+            $("p:eq(1)").click(function(){
+                // $(this).empty();
+                $(this).parent().empty();  //element는 냅두고 안에 내용 싹 다 지움
+            });
+
+            $("p:eq(2)").click(function(){
+                let ele = $(this).detach();
+
+                $("h1").append(ele);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>엘리먼트 제거하기</h1>
+
+    <div>
+        <p>remove</p>
+        <p>empty</p>
+        <p>detach</p>
+    </div>
+</body>
+</html>
