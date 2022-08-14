@@ -35,6 +35,8 @@
                 alert("이미지를 클릭했습니다.");
                 $(this).hide();
             });
+            let li = $(".map > div").eq(1);
+            console.log(li)
         });
         function showImg(){
             $("img").show();
@@ -69,6 +71,10 @@
     <br><br>
     <div>
         <img alt="test" src="image/img04.PNG">
+    </div>
+    <div id="map">
+        <div style="display: block;">ppp</div>
+        <div style="display: block;">ppp1</div>
     </div>
 </body>
 </html>

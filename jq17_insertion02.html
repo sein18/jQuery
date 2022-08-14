@@ -19,10 +19,11 @@
             });
 
             $("button:eq(2)").click(function(){
-                $("#base").before("<div>새로운 엘리먼트(before)</div>");
+
             });
             $("button:eq(3)").click(function(){
                 $("<div>새로운 엘리먼트(insertBefore)</div>").insertBefore("#base");
+                $("#base").remove();
             });
         });
     </script>
